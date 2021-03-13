@@ -1,5 +1,5 @@
 ---
-title: Community/community-search v20210310.1
+title: Community/community-search v20210312.1
 language_tabs: []
 toc_footers: []
 includes: []
@@ -7,16 +7,15 @@ search: true
 code_clipboard: true
 highlight_theme: darkula
 headingLevel: 2
-generator: osisoft.widdershins v1.0.5
+generator: osisoft.widdershins v1.0.6
 
 ---
 
-<h1 id="community-community-search-community-search">Community Search</h1>
+[[_TOC_]]
+
+# Community Search
 Defines the public API endpoints that are used to search communities. A community provides a way to share information, such as data streams, between customers.
 
-	
-
----
 ## Search Streams
 
 <a id="opIdCommunitySearch_Search Streams"></a>
@@ -26,14 +25,20 @@ Searches for streams within a community by query.
 ### Request
 ```text 
 GET /api/v1/tenants/{tenantId}/communities/{communityId}/search/streams
+?query={query}&maxNamespaceResults={maxNamespaceResults}&maxTotalResults={maxTotalResults}
 ```
 
-<h3 id="communitysearch_search-streams-parameters">Parameters</h3>
+### Parameters
 
-`string tenantId`<br/>The id of the owning tenant.<br/><br/>`string communityId`<br/>The id of the community.<br/><br/>
-`[optional] string query`<br/>The query. This is in the same format as used by SDS. See<br/><br/>`[optional] integer maxNamespaceResults`<br/>The maximum namespace results.<br/><br/>`[optional] integer maxTotalResults`<br/>The maximum total results.<br/><br/>
+`string tenantId`
+<br/>The id of the owning tenant.<br/><br/>`string communityId`
+<br/>The id of the community.<br/><br/>
+`[optional] string query`
+<br/>The query. This is in the same format as used by SDS. See<br/><br/>`[optional] integer maxNamespaceResults`
+<br/>The maximum namespace results.<br/><br/>`[optional] integer maxTotalResults`
+<br/>The maximum total results.<br/><br/>
 
-<h3 id="communitysearch_search-streams-responses">Responses</h3>
+### Response
 
 |Status Code|Body Type|Description|
 |---|---|---|
@@ -45,7 +50,7 @@ GET /api/v1/tenants/{tenantId}/communities/{communityId}/search/streams
 |408|[ErrorResponse](#schemaerrorresponse)|Request Timeout. The request has timed out.|
 |500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error. The server has encountered a situation it doesn't know how to handle.|
 
-### Example response body
+#### Example response body
 > 400 Response
 
 ```json
@@ -59,8 +64,7 @@ GET /api/v1/tenants/{tenantId}/communities/{communityId}/search/streams
 
 ### Authorization
 
-Allowed for these roles: <br/><br/>
-<b>Authorized Roles</b> 
+Allowed for these roles: 
 <ul>
 <li>Account Administrator</li>
 <li>Community Administrator</li>
@@ -68,14 +72,24 @@ Allowed for these roles: <br/><br/>
 <li>Community Moderator</li>
 </ul>
 
+---
 # Definitions
 
-<h2 id="tocS_ErrorResponse">ErrorResponse</h2>
+## ErrorResponse
 
 <a id="schemaerrorresponse"></a>
 <a id="schema_ErrorResponse"></a>
 <a id="tocSerrorresponse"></a>
 <a id="tocserrorresponse"></a>
+
+### Properties
+
+|Property Name|Data Type|Required|Nullable|Description|
+|---|---|---|---|---|
+|OperationId|string|false|true|Gets or sets Operation Id of action that caused the Error.|
+|Error|string|false|true|Gets or sets the Error description.|
+|Reason|string|false|true|Gets or sets the Reason for the Error.|
+|Resolution|string|false|true|Gets or set the Resolution for the Error.|
 
 ```json
 {
@@ -87,12 +101,5 @@ Allowed for these roles: <br/><br/>
 
 ```
 
-### Properties
-
-|Property Name|Data Type|Required|Nullable|Description|
-|---|---|---|---|---|
-|OperationId|string|false|true|Gets or sets Operation Id of action that caused the Error.|
-|Error|string|false|true|Gets or sets the Error description.|
-|Reason|string|false|true|Gets or sets the Reason for the Error.|
-|Resolution|string|false|true|Gets or set the Resolution for the Error.|
+---
 
