@@ -1,5 +1,5 @@
 ---
-title: Community/community-search v20210320.1
+title: Community/community-search v20210322.1
 language_tabs: []
 toc_footers: []
 includes: []
@@ -7,11 +7,9 @@ search: true
 code_clipboard: true
 highlight_theme: darkula
 headingLevel: 2
-generator: osisoft.widdershins v1.0.6
+generator: osisoft.widdershins v1.0.7
 
 ---
-
-[[_TOC_]]
 
 # Community Search
 Defines the public API endpoints that are used to search communities. A community provides a way to share information, such as data streams, between customers.
@@ -28,7 +26,7 @@ GET /api/v1/tenants/{tenantId}/communities/{communityId}/search/streams
 ?query={query}&maxNamespaceResults={maxNamespaceResults}&maxTotalResults={maxTotalResults}
 ```
 
-### Parameters
+#### Parameters
 
 `string tenantId`
 <br/>The id of the owning tenant.<br/><br/>`string communityId`
