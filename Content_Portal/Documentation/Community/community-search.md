@@ -1,5 +1,5 @@
 ---
-title: Community/community-search v20210401.1
+title: Community/community-search v20210402.1
 language_tabs: []
 toc_footers: []
 includes: []
@@ -23,7 +23,7 @@ Searches for streams within a community by query.
 ### Request
 ```text 
 GET /api/v1-preview/tenants/{tenantId}/communities/{communityId}/search/streams
-?query={query}&maxNamespaceResults={maxNamespaceResults}&maxTotalResults={maxTotalResults}
+?query={query}&count={count}
 ```
 
 #### Parameters
@@ -32,15 +32,14 @@ GET /api/v1-preview/tenants/{tenantId}/communities/{communityId}/search/streams
 <br/>The id of the owning tenant.<br/><br/>`string communityId`
 <br/>The id of the community.<br/><br/>
 `[optional] string query`
-<br/>The query. This is in the same format as used by SDS. See<br/><br/>`[optional] integer maxNamespaceResults`
-<br/>The maximum namespace results.<br/><br/>`[optional] integer maxTotalResults`
+<br/>The query. This is in the same format as used by SDS. See<br/><br/>`[optional] integer count`
 <br/>The maximum total results.<br/><br/>
 
 ### Response
 
 |Status Code|Body Type|Description|
 |---|---|---|
-|204|None|Returns the stream information that matches the search criteria. This is a set of objects of type `StreamSearchResult`.|
+|200|[StreamSearchResult](#schemastreamsearchresult)|Returns the stream information that matches the search criteria. This is a set of objects of type `StreamSearchResult`.|
 |400|[ErrorResponse](#schemaerrorresponse)|Bad Request. The server could not understand the request due to invalid syntax.|
 |401|None|Unauthorized. The client has not been authenticated.|
 |403|[ErrorResponse](#schemaerrorresponse)|Forbidden. The client does not have the required permissions to make the request.|
@@ -49,14 +48,15 @@ GET /api/v1-preview/tenants/{tenantId}/communities/{communityId}/search/streams
 |500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error. The server has encountered a situation it doesn't know how to handle.|
 
 #### Example response body
-> 400 Response
+> 200 Response
 
 ```json
 {
-  "OperationId": "string",
-  "Error": "string",
-  "Reason": "string",
-  "Resolution": "string"
+  "Id": "string",
+  "Name": "string",
+  "TypeId": "string",
+  "Description": "string",
+  "Self": "string"
 }
 ```
 
@@ -81,7 +81,7 @@ Searches for streams within a community by query.
 ### Request
 ```text 
 GET /api/v1-preview/tenants/{tenantId}/search/communities/{communityId}/streams
-?query={query}&maxNamespaceResults={maxNamespaceResults}&maxTotalResults={maxTotalResults}
+?query={query}&count={count}
 ```
 
 #### Parameters
@@ -90,15 +90,14 @@ GET /api/v1-preview/tenants/{tenantId}/search/communities/{communityId}/streams
 <br/>The id of the owning tenant.<br/><br/>`string communityId`
 <br/>The id of the community.<br/><br/>
 `[optional] string query`
-<br/>The query. This is in the same format as used by SDS. See<br/><br/>`[optional] integer maxNamespaceResults`
-<br/>The maximum namespace results.<br/><br/>`[optional] integer maxTotalResults`
+<br/>The query. This is in the same format as used by SDS. See<br/><br/>`[optional] integer count`
 <br/>The maximum total results.<br/><br/>
 
 ### Response
 
 |Status Code|Body Type|Description|
 |---|---|---|
-|204|None|Returns the stream information that matches the search criteria. This is a set of objects of type `StreamSearchResult`.|
+|200|[StreamSearchResult](#schemastreamsearchresult)|Returns the stream information that matches the search criteria. This is a set of objects of type `StreamSearchResult`.|
 |400|[ErrorResponse](#schemaerrorresponse)|Bad Request. The server could not understand the request due to invalid syntax.|
 |401|None|Unauthorized. The client has not been authenticated.|
 |403|[ErrorResponse](#schemaerrorresponse)|Forbidden. The client does not have the required permissions to make the request.|
@@ -107,14 +106,15 @@ GET /api/v1-preview/tenants/{tenantId}/search/communities/{communityId}/streams
 |500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error. The server has encountered a situation it doesn't know how to handle.|
 
 #### Example response body
-> 400 Response
+> 200 Response
 
 ```json
 {
-  "OperationId": "string",
-  "Error": "string",
-  "Reason": "string",
-  "Resolution": "string"
+  "Id": "string",
+  "Name": "string",
+  "TypeId": "string",
+  "Description": "string",
+  "Self": "string"
 }
 ```
 
@@ -130,6 +130,38 @@ Allowed for these roles:
 
 ---
 # Definitions
+
+## StreamSearchResult
+
+<a id="schemastreamsearchresult"></a>
+<a id="schema_StreamSearchResult"></a>
+<a id="tocSstreamsearchresult"></a>
+<a id="tocsstreamsearchresult"></a>
+
+The StreamSearchResult Data Transfer Object. This is the model representation exposed to callers of controller endpoints.
+
+### Properties
+
+|Property Name|Data Type|Required|Nullable|Description|
+|---|---|---|---|---|
+|Id|string|false|true|The id.|
+|Name|string|false|true|The name.|
+|TypeId|string|false|true|The type id.|
+|Description|string|false|true|The description.|
+|Self|string|false|true|The self link.|
+
+```json
+{
+  "Id": "string",
+  "Name": "string",
+  "TypeId": "string",
+  "Description": "string",
+  "Self": "string"
+}
+
+```
+
+---
 
 ## ErrorResponse
 
