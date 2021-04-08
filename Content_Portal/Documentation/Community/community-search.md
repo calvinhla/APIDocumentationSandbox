@@ -1,5 +1,5 @@
 ---
-title: Community/community-search v20210407.1
+title: Community/community-search v20210408.1
 language_tabs: []
 toc_footers: []
 includes: []
@@ -64,10 +64,10 @@ GET /api/v1-preview/tenants/{tenantId}/communities/{communityId}/search/streams
 
 Allowed for these roles: 
 <ul>
-<li>Account Administrator</li>
 <li>Community Administrator</li>
 <li>Community Member</li>
 <li>Community Moderator</li>
+<li>Tenant Administrator</li>
 </ul>
 
 ---
@@ -122,10 +122,10 @@ GET /api/v1-preview/tenants/{tenantId}/search/communities/{communityId}/streams
 
 Allowed for these roles: 
 <ul>
-<li>Account Administrator</li>
 <li>Community Administrator</li>
 <li>Community Member</li>
 <li>Community Moderator</li>
+<li>Tenant Administrator</li>
 </ul>
 
 ---
