@@ -1,5 +1,5 @@
 ---
-title: Community/community-search v20210416.1
+title: Community/community-search v20210419.1
 language_tabs: []
 toc_footers: []
 includes: []
@@ -23,7 +23,7 @@ Searches for streams within a community by query.
 ### Request
 ```text 
 GET /api/v1-preview/tenants/{tenantId}/communities/{communityId}/search/streams
-?query={query}&count={count}
+?query={query}&count={count}&searchTenantId={searchTenantId}
 ```
 
 #### Parameters
@@ -33,7 +33,8 @@ GET /api/v1-preview/tenants/{tenantId}/communities/{communityId}/search/streams
 <br/>The id of the community.<br/><br/>
 `[optional] string query`
 <br/>The query. This is in the same format as used by SDS. See<br/><br/>`[optional] integer count`
-<br/>The maximum total results.<br/><br/>
+<br/>The maximum total results.<br/><br/>`[optional] string searchTenantId`
+<br/>TenantId of the streams to be searched. Having this param enables the api to search streams based on tenantId.By default this holds an empty Guid.<br/><br/>
 
 ### Response
 
@@ -81,7 +82,7 @@ Searches for streams within a community by query.
 ### Request
 ```text 
 GET /api/v1-preview/tenants/{tenantId}/search/communities/{communityId}/streams
-?query={query}&count={count}
+?query={query}&count={count}&searchTenantId={searchTenantId}
 ```
 
 #### Parameters
@@ -91,7 +92,8 @@ GET /api/v1-preview/tenants/{tenantId}/search/communities/{communityId}/streams
 <br/>The id of the community.<br/><br/>
 `[optional] string query`
 <br/>The query. This is in the same format as used by SDS. See<br/><br/>`[optional] integer count`
-<br/>The maximum total results.<br/><br/>
+<br/>The maximum total results.<br/><br/>`[optional] string searchTenantId`
+<br/>TenantId of the streams to be searched. Having this param enables the api to search streams based on tenantId.By default this holds an empty Guid.<br/><br/>
 
 ### Response
 
