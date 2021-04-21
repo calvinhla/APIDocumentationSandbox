@@ -1,5 +1,5 @@
 ---
-title: Community/community-search v20210419.1
+title: Community/community-search v20210420.1
 language_tabs: []
 toc_footers: []
 includes: []
@@ -18,7 +18,7 @@ Defines the public API endpoints that are used to search communities. A communit
 
 <a id="opIdCommunitySearch_Search Streams2"></a>
 
-Searches for streams within a community by query.
+Searches for streams within a community by query
 
 ### Request
 ```text 
@@ -29,12 +29,12 @@ GET /api/v1-preview/tenants/{tenantId}/communities/{communityId}/search/streams
 #### Parameters
 
 `string tenantId`
-<br/>The id of the owning tenant.<br/><br/>`string communityId`
-<br/>The id of the community.<br/><br/>
+<br/>Owning tenant identifier<br/><br/>`string communityId`
+<br/>Community identifier<br/><br/>
 `[optional] string query`
-<br/>The query. This is in the same format as used by SDS. See<br/><br/>`[optional] integer count`
-<br/>The maximum total results.<br/><br/>`[optional] string searchTenantId`
-<br/>TenantId of the streams to be searched. Having this param enables the api to search streams based on tenantId.By default this holds an empty Guid.<br/><br/>
+<br/>Query to execute. The query uses the same format as SDS. See<br/><br/>`[optional] integer count`
+<br/>Maximum total results<br/><br/>`[optional] string searchTenantId`
+<br/>TenantId of the streams to be searched. This param enables the API to search streams based on tenantId. By default this holds an empty GUID.<br/><br/>
 
 ### Response
 
@@ -46,7 +46,7 @@ GET /api/v1-preview/tenants/{tenantId}/communities/{communityId}/search/streams
 |403|[ErrorResponse](#schemaerrorresponse)|Forbidden. The client does not have the required permissions to make the request.|
 |404|[ErrorResponse](#schemaerrorresponse)|Not Found. The requested community was not found.|
 |408|[ErrorResponse](#schemaerrorresponse)|Request Timeout. The request has timed out.|
-|500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error. The server has encountered a situation it doesn't know how to handle.|
+|500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error. The server has encountered a situation it does not know how to handle.|
 
 #### Example response body
 > 200 Response
@@ -77,7 +77,7 @@ Allowed for these roles:
 
 <a id="opIdCommunitySearch_Search Streams"></a>
 
-Searches for streams within a community by query.
+Searches for streams within a community by query
 
 ### Request
 ```text 
@@ -88,12 +88,12 @@ GET /api/v1-preview/tenants/{tenantId}/search/communities/{communityId}/streams
 #### Parameters
 
 `string tenantId`
-<br/>The id of the owning tenant.<br/><br/>`string communityId`
-<br/>The id of the community.<br/><br/>
+<br/>Owning tenant identifier<br/><br/>`string communityId`
+<br/>Community identifier<br/><br/>
 `[optional] string query`
-<br/>The query. This is in the same format as used by SDS. See<br/><br/>`[optional] integer count`
-<br/>The maximum total results.<br/><br/>`[optional] string searchTenantId`
-<br/>TenantId of the streams to be searched. Having this param enables the api to search streams based on tenantId.By default this holds an empty Guid.<br/><br/>
+<br/>Query to execute. The query uses the same format as SDS. See<br/><br/>`[optional] integer count`
+<br/>Maximum total results<br/><br/>`[optional] string searchTenantId`
+<br/>TenantId of the streams to be searched. This param enables the API to search streams based on tenantId. By default this holds an empty GUID.<br/><br/>
 
 ### Response
 
@@ -105,7 +105,7 @@ GET /api/v1-preview/tenants/{tenantId}/search/communities/{communityId}/streams
 |403|[ErrorResponse](#schemaerrorresponse)|Forbidden. The client does not have the required permissions to make the request.|
 |404|[ErrorResponse](#schemaerrorresponse)|Not Found. The requested community was not found.|
 |408|[ErrorResponse](#schemaerrorresponse)|Request Timeout. The request has timed out.|
-|500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error. The server has encountered a situation it doesn't know how to handle.|
+|500|[ErrorResponse](#schemaerrorresponse)|Internal Server Error. The server has encountered a situation it does not know how to handle.|
 
 #### Example response body
 > 200 Response
@@ -146,11 +146,11 @@ The StreamSearchResult Data Transfer Object. This is the model representation ex
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
-|Id|string|false|true|The id.|
-|Name|string|false|true|The name.|
-|TypeId|string|false|true|The type id.|
-|Description|string|false|true|The description.|
-|Self|string|false|true|The self link.|
+|Id|string|false|true|The Id|
+|Name|string|false|true|The name|
+|TypeId|string|false|true|The type Id|
+|Description|string|false|true|The description|
+|Self|string|false|true|The self link|
 
 ```json
 {
@@ -176,10 +176,10 @@ The StreamSearchResult Data Transfer Object. This is the model representation ex
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
-|OperationId|string|false|true|Gets or sets Operation Id of action that caused the Error.|
-|Error|string|false|true|Gets or sets the Error description.|
-|Reason|string|false|true|Gets or sets the Reason for the Error.|
-|Resolution|string|false|true|Gets or set the Resolution for the Error.|
+|OperationId|string|false|true|OperationId of the action that caused the error|
+|Error|string|false|true|Error description|
+|Reason|string|false|true|Reason for the error|
+|Resolution|string|false|true|Resolution for the Error|
 
 ```json
 {
