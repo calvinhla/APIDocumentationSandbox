@@ -1,5 +1,5 @@
 ---
-title: Community/community-search v20210421.1
+title: Community/community-search v20210422.1
 language_tabs: []
 toc_footers: []
 includes: []
@@ -32,9 +32,9 @@ GET /api/v1-preview/tenants/{tenantId}/search/communities/{communityId}/streams
 <br/>Owning tenant identifier<br/><br/>`string communityId`
 <br/>Community identifier<br/><br/>
 `[optional] string query`
-<br/>Query to execute. The query uses the same format as SDS. See<br/><br/>`[optional] integer count`
+<br/>Query to execute. The query uses the same format as SDS. See [Search in SDS](xref:sdsSearching).<br/><br/>`[optional] integer count`
 <br/>Maximum total results<br/><br/>`[optional] string searchTenantId`
-<br/>TenantId of the streams to be searched. This param enables the API to search streams based on tenantId. By default this holds an empty GUID.<br/><br/>
+<br/>The tenant identifier of the streams to be searched. This parameter enables the API to search streams based on tenantID. By default this parameter holds an empty GUID.<br/><br/>
 
 ### Response
 
@@ -81,7 +81,7 @@ Allowed for these roles:
 <a id="tocSstreamsearchresult"></a>
 <a id="tocsstreamsearchresult"></a>
 
-The StreamSearchResult Data Transfer Object. This is the model representation exposed to callers of controller endpoints.
+The StreamSearchResult object. This is the model representation exposed to callers of controller endpoints.
 
 ### Properties
 
