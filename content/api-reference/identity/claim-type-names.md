@@ -1,5 +1,5 @@
 ---
-title: identity/claim-type-names v20210426.1
+title: identity/claim-type-names v20210426.2
 language_tabs: []
 toc_footers: []
 includes: []
