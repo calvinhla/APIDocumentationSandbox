@@ -1,5 +1,5 @@
 ---
-title: identity/api-identity-providers v20210426.3
+title: identity/api-identity-providers v20210427.1
 language_tabs: []
 toc_footers: []
 includes: []
@@ -291,9 +291,9 @@ Allowed for these roles:
 </ul>
 
 ---
-# Definitions
+## Definitions
 
-## IdentityProvider
+### IdentityProvider
 
 <a id="schemaidentityprovider"></a>
 <a id="schema_IdentityProvider"></a>
@@ -302,7 +302,7 @@ Allowed for these roles:
 
 The IdentityProvider object
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
@@ -339,7 +339,7 @@ The IdentityProvider object
 
 ---
 
-## IdentityProviderCapabilities
+### IdentityProviderCapabilities
 
 <a id="schemaidentityprovidercapabilities"></a>
 <a id="schema_IdentityProviderCapabilities"></a>
@@ -348,7 +348,7 @@ The IdentityProvider object
 
 The model for the capabilities of an identity provider
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
@@ -372,7 +372,7 @@ The model for the capabilities of an identity provider
 
 ---
 
-## IdentityProviderUserCapabilites
+### IdentityProviderUserCapabilites
 
 <a id="schemaidentityproviderusercapabilites"></a>
 <a id="schema_IdentityProviderUserCapabilites"></a>
@@ -381,7 +381,7 @@ The model for the capabilities of an identity provider
 
 User-level capabilities of an identity provider
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
@@ -400,7 +400,7 @@ User-level capabilities of an identity provider
 
 ---
 
-## IdentityProviderGroupCapabilites
+### IdentityProviderGroupCapabilites
 
 <a id="schemaidentityprovidergroupcapabilites"></a>
 <a id="schema_IdentityProviderGroupCapabilites"></a>
@@ -409,7 +409,7 @@ User-level capabilities of an identity provider
 
 The model for the group level capabilities of an identity provider
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
@@ -426,7 +426,7 @@ The model for the group level capabilities of an identity provider
 
 ---
 
-## ErrorResponse
+### ErrorResponse
 
 <a id="schemaerrorresponse"></a>
 <a id="schema_ErrorResponse"></a>
@@ -435,7 +435,7 @@ The model for the group level capabilities of an identity provider
 
 Object returned whenever there is an error TODO: Remove this internal model and re-adopt public model when moving to System.Text.Json in WI 202168.
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|

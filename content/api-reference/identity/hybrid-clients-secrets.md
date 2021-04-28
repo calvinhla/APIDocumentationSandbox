@@ -1,5 +1,5 @@
 ---
-title: identity/hybrid-clients-secrets v20210426.3
+title: identity/hybrid-clients-secrets v20210427.1
 language_tabs: []
 toc_footers: []
 includes: []
@@ -605,9 +605,9 @@ Allowed for these roles:
 </ul>
 
 ---
-# Definitions
+## Definitions
 
-## ClientSecret
+### ClientSecret
 
 <a id="schemaclientsecret"></a>
 <a id="schema_ClientSecret"></a>
@@ -616,7 +616,7 @@ Allowed for these roles:
 
 Client secret object.
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
@@ -637,7 +637,7 @@ Client secret object.
 
 ---
 
-## ErrorResponse
+### ErrorResponse
 
 <a id="schemaerrorresponse"></a>
 <a id="schema_ErrorResponse"></a>
@@ -646,7 +646,7 @@ Client secret object.
 
 Object returned whenever there is an error
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
@@ -674,7 +674,7 @@ Object returned whenever there is an error
 
 ---
 
-## ClientSecretResponse
+### ClientSecretResponse
 
 <a id="schemaclientsecretresponse"></a>
 <a id="schema_ClientSecretResponse"></a>
@@ -683,7 +683,7 @@ Object returned whenever there is an error
 
 Object returned after a client secret is created.
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
@@ -706,7 +706,7 @@ Object returned after a client secret is created.
 
 ---
 
-## ClientSecretCreateOrUpdate
+### ClientSecretCreateOrUpdate
 
 <a id="schemaclientsecretcreateorupdate"></a>
 <a id="schema_ClientSecretCreateOrUpdate"></a>
@@ -715,7 +715,7 @@ Object returned after a client secret is created.
 
 Object to write a client secret.
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
@@ -734,7 +734,7 @@ Object to write a client secret.
 
 ---
 
-## ClientSecret2
+### ClientSecret2
 
 <a id="schemaclientsecret2"></a>
 <a id="schema_ClientSecret2"></a>
@@ -743,7 +743,7 @@ Object to write a client secret.
 
 Client secret object
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
@@ -766,7 +766,7 @@ Client secret object
 
 ---
 
-## ClientSecretResponse2
+### ClientSecretResponse2
 
 <a id="schemaclientsecretresponse2"></a>
 <a id="schema_ClientSecretResponse2"></a>
@@ -775,7 +775,7 @@ Client secret object
 
 Object returned after a client secret is created.
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|

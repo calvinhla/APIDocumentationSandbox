@@ -1,5 +1,5 @@
 ---
-title: identity/authorization-code-clients v20210426.3
+title: identity/authorization-code-clients v20210427.1
 language_tabs: []
 toc_footers: []
 includes: []
@@ -479,9 +479,9 @@ Allowed for these roles:
 </ul>
 
 ---
-# Definitions
+## Definitions
 
-## AuthorizationCodeClient
+### AuthorizationCodeClient
 
 <a id="schemaauthorizationcodeclient"></a>
 <a id="schema_AuthorizationCodeClient"></a>
@@ -490,7 +490,7 @@ Allowed for these roles:
 
 Object used during AuthorizationCodeClient creation
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
@@ -531,7 +531,7 @@ Object used during AuthorizationCodeClient creation
 
 ---
 
-## ErrorResponse
+### ErrorResponse
 
 <a id="schemaerrorresponse"></a>
 <a id="schema_ErrorResponse"></a>
@@ -540,7 +540,7 @@ Object used during AuthorizationCodeClient creation
 
 Object returned whenever there is an error
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
@@ -568,7 +568,7 @@ Object returned whenever there is an error
 
 ---
 
-## ClientCredentialClient
+### ClientCredentialClient
 
 <a id="schemaclientcredentialclient"></a>
 <a id="schema_ClientCredentialClient"></a>
@@ -577,7 +577,7 @@ Object returned whenever there is an error
 
 Object to get or update a ClientCredentialClient
 
-### Properties
+#### Properties
 
 |Property Name|Data Type|Required|Nullable|Description|
 |---|---|---|---|---|
